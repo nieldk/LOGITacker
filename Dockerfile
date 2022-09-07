@@ -36,8 +36,7 @@ RUN mkdir build && \
     cp LOGITacker/pca10059/blank/armgcc/_build/logitacker_pca10059.hex build && \
     cp LOGITacker/mdk/blank/armgcc/_build/logitacker_mdk.hex build && \
     cp LOGITacker/mdk-dongle/blank/armgcc/_build/logitacker_mdk_dongle.hex build && \
+    python3 uf2conv.py build/logitacker_pca10059.hex -c -f 0xADA52840 -o build/logitacker_pca10059.uf2
     python3 uf2conv.py LOGITacker/apr-dongle/blank/armgcc/_build/logitacker_aprdongle.hex -c -f 0xADA52840 -o build/logitacker_aprdongle.uf2 && \
     python3 uf2conv.py build/logitacker_mdk.hex -c -f 0xADA52840 -o build/logitacker_mdk.uf2 && \
     python3 uf2conv.py build/logitacker_mdk_dongle.hex -c -f 0xADA52840 -o build/logitacker_mdk_dongle.uf2
-    python3 uf2conv.py build/logitacker_pca10059.hex -c -f 0xADA52840 -o build/logitacker_pca10059.uf2
-
